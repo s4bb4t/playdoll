@@ -25,12 +25,12 @@ func Greeting() {
 	HiFrankie()
 }
 
-func Fillin() {
+func FillIn() {
 	fmt.Print("Ваш выбор: ")
 }
 
-func Draculaura(d doll.Doll) (string, string, []string) {
-	d.SetName("\nДракулаура")
+func Draculaura(d *doll.Doll) (name string, surname string, phrases []string) {
+	d.SetName("Дракулаура")
 	d.SetSurname("Вамп")
 	d.SetPhrase("- О, хеллооо! Я так рада тебя видеть, просто кровь кипит!")
 	d.SetPhrase("- Ужасно прекрасно! Пью смузи из клубники и читаю модный журнал 🩸")
@@ -39,7 +39,7 @@ func Draculaura(d doll.Doll) (string, string, []string) {
 }
 
 func Clawdeen(d doll.Doll) (string, string, []string) {
-	d.SetName("\nКлодин")
+	d.SetName("Клодин")
 	d.SetSurname("Вульф")
 	d.SetPhrase("- Эй, волчица всегда на стиле! Ты как?")
 	d.SetPhrase("- О, милашка, как всегда — идеально, просто луна сияет для меня!")
@@ -48,7 +48,7 @@ func Clawdeen(d doll.Doll) (string, string, []string) {
 }
 
 func Frankie(d doll.Doll) (string, string, []string) {
-	d.SetName("\nФрэнки")
+	d.SetName("Фрэнки")
 	d.SetSurname("Штейн")
 	d.SetPhrase("- Здарова! Надеюсь, ток между нами пробежал ⚡")
 	d.SetPhrase("- Ой, сегодня чуть не перегорела, но всё супер, я подзарядилась!")
@@ -56,6 +56,23 @@ func Frankie(d doll.Doll) (string, string, []string) {
 	return d.Name, d.Surname, d.Phrase
 }
 
-func Choice(s string, n string, answer string) {
-	fmt.Println("Пользователь окликнул ", n, "\nОн остановился напротив нее, немного помялся, и наконец произнес: Привет!\n", answer, " - сказала ", n, " ", s)
+func Choice(n string, s string, answer string) {
+	fmt.Println("Пользователь окликнул куклу по имени:", n, "\n\nВы остановились напротив нее, немного помялись, и наконец произнесли: Привет!\n", answer, " - сказала ", n, s)
+}
+
+func Pause() {
+	fmt.Println("\nОго! Кукла осказалась действительно живой... Что же сказать дальше?")
+}
+
+func Variants(s string) {
+	fmt.Println("\n- kак дела? -")
+	fmt.Println(s)
+	fmt.Println("- пока! -\n")
+}
+
+func Bye() {
+	fmt.Println("- Уже? Ладно... Пока!")
+}
+func DonGetIt() {
+	fmt.Println("- Ой, что-то я совсем ничего не поняла, повтори-ка еще раз!")
 }

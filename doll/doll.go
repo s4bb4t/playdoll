@@ -21,3 +21,7 @@ func (d *Doll) SetSurname(s string) {
 func (d *Doll) SetPhrase(phrase string) {
 	d.Phrase = append(d.Phrase, phrase)
 }
+
+func (d *Doll) GetName() string {
+	return d.Name
+}
